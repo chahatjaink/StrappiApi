@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "librarians",
+  "info": {
+    "singularName": "librarian",
+    "pluralName": "librarians",
+    "displayName": "Librarian",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3
+    },
+    "email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": true,
+      "minLength": 5
+    },
+    "books": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book.book",
+      "mappedBy": "librarian"
+    }
+  }
+}
