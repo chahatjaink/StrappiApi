@@ -26,20 +26,6 @@
     "publication_date": {
       "type": "date"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "librarian": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::librarian.librarian",
-      "inversedBy": "books"
-    },
     "user": {
       "type": "relation",
       "relation": "manyToOne",

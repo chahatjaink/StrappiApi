@@ -27,12 +27,6 @@
       "type": "password",
       "required": true,
       "minLength": 5
-    },
-    "books": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::book.book",
-      "mappedBy": "librarian"
     }
   }
 }
